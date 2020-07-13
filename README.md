@@ -21,6 +21,11 @@ Analysis of Political Propensity by Newspaper through Web Data Crawling
     + 가장 많이 사용된 단어들은 신문사 별로 차이가 별로 없기 때문 (공통된 단어들이 많음)
   * 신문사 별 정치성향을 드러내는 단어(민주당, 미래당/통합당)으로 정치성향 파악 (scatter plot으로 시각화)
   
+- 활용 라이브러리
+  * 데이터 수집 : BeautifulSoup, selenium
+  * 워드클라우드 : wordcloud, Okt
+  * 그래프 : matplotlib, seaborn
+  
 - 인사이트 도출
   * 일부 언론사의 경우 일제강점기부터 비롯된 뚜렷한 정치적 성향을 띈 언론사와 광복 이후 출현한 언론사는 일부 민족지도 있었으나 군부에 의해 통폐합을 반복하며 보수적
   * 거론된 20 개 언론사는 보수적 성향의 지향점을 가질 수 밖에 없는 태생적 한계가 있음
