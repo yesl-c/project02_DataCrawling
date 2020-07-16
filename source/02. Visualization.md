@@ -1,26 +1,11 @@
+한글 폰트 설정
+
 ```python
 !apt-get update -qq
 !apt-get install fonts-nanum* -qq 
 ```
 
-    Selecting previously unselected package fonts-nanum.
-    (Reading database ... 144379 files and directories currently installed.)
-    Preparing to unpack .../fonts-nanum_20170925-1_all.deb ...
-    Unpacking fonts-nanum (20170925-1) ...
-    Selecting previously unselected package fonts-nanum-eco.
-    Preparing to unpack .../fonts-nanum-eco_1.000-6_all.deb ...
-    Unpacking fonts-nanum-eco (1.000-6) ...
-    Selecting previously unselected package fonts-nanum-extra.
-    Preparing to unpack .../fonts-nanum-extra_20170925-1_all.deb ...
-    Unpacking fonts-nanum-extra (20170925-1) ...
-    Selecting previously unselected package fonts-nanum-coding.
-    Preparing to unpack .../fonts-nanum-coding_2.5-1_all.deb ...
-    Unpacking fonts-nanum-coding (2.5-1) ...
-    Setting up fonts-nanum-extra (20170925-1) ...
-    Setting up fonts-nanum (20170925-1) ...
-    Setting up fonts-nanum-coding (2.5-1) ...
-    Setting up fonts-nanum-eco (1.000-6) ...
-    Processing triggers for fontconfig (2.12.6-0ubuntu2) ...
+    
     
 
 
@@ -28,41 +13,9 @@
 !pip install konlpy
 ```
 
-    Collecting konlpy
-    [?25l  Downloading https://files.pythonhosted.org/packages/85/0e/f385566fec837c0b83f216b2da65db9997b35dd675e107752005b7d392b1/konlpy-0.5.2-py2.py3-none-any.whl (19.4MB)
-    [K     |████████████████████████████████| 19.4MB 1.3MB/s 
-    [?25hRequirement already satisfied: lxml>=4.1.0 in /usr/local/lib/python3.6/dist-packages (from konlpy) (4.2.6)
-    Collecting colorama
-      Downloading https://files.pythonhosted.org/packages/c9/dc/45cdef1b4d119eb96316b3117e6d5708a08029992b2fee2c143c7a0a5cc5/colorama-0.4.3-py2.py3-none-any.whl
-    Collecting beautifulsoup4==4.6.0
-    [?25l  Downloading https://files.pythonhosted.org/packages/9e/d4/10f46e5cfac773e22707237bfcd51bbffeaf0a576b0a847ec7ab15bd7ace/beautifulsoup4-4.6.0-py3-none-any.whl (86kB)
-    [K     |████████████████████████████████| 92kB 7.7MB/s 
-    [?25hCollecting JPype1>=0.7.0
-    [?25l  Downloading https://files.pythonhosted.org/packages/2d/9b/e115101a833605b3c0e6f3a2bc1f285c95aaa1d93ab808314ca1bde63eed/JPype1-0.7.5-cp36-cp36m-manylinux2010_x86_64.whl (3.6MB)
-    [K     |████████████████████████████████| 3.6MB 45.1MB/s 
-    [?25hCollecting tweepy>=3.7.0
-      Downloading https://files.pythonhosted.org/packages/36/1b/2bd38043d22ade352fc3d3902cf30ce0e2f4bf285be3b304a2782a767aec/tweepy-3.8.0-py2.py3-none-any.whl
-    Requirement already satisfied: numpy>=1.6 in /usr/local/lib/python3.6/dist-packages (from konlpy) (1.18.5)
-    Requirement already satisfied: requests>=2.11.1 in /usr/local/lib/python3.6/dist-packages (from tweepy>=3.7.0->konlpy) (2.23.0)
-    Requirement already satisfied: six>=1.10.0 in /usr/local/lib/python3.6/dist-packages (from tweepy>=3.7.0->konlpy) (1.12.0)
-    Requirement already satisfied: requests-oauthlib>=0.7.0 in /usr/local/lib/python3.6/dist-packages (from tweepy>=3.7.0->konlpy) (1.3.0)
-    Requirement already satisfied: PySocks>=1.5.7 in /usr/local/lib/python3.6/dist-packages (from tweepy>=3.7.0->konlpy) (1.7.1)
-    Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.6/dist-packages (from requests>=2.11.1->tweepy>=3.7.0->konlpy) (2020.6.20)
-    Requirement already satisfied: idna<3,>=2.5 in /usr/local/lib/python3.6/dist-packages (from requests>=2.11.1->tweepy>=3.7.0->konlpy) (2.9)
-    Requirement already satisfied: chardet<4,>=3.0.2 in /usr/local/lib/python3.6/dist-packages (from requests>=2.11.1->tweepy>=3.7.0->konlpy) (3.0.4)
-    Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/local/lib/python3.6/dist-packages (from requests>=2.11.1->tweepy>=3.7.0->konlpy) (1.24.3)
-    Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.6/dist-packages (from requests-oauthlib>=0.7.0->tweepy>=3.7.0->konlpy) (3.1.0)
-    Installing collected packages: colorama, beautifulsoup4, JPype1, tweepy, konlpy
-      Found existing installation: beautifulsoup4 4.6.3
-        Uninstalling beautifulsoup4-4.6.3:
-          Successfully uninstalled beautifulsoup4-4.6.3
-      Found existing installation: tweepy 3.6.0
-        Uninstalling tweepy-3.6.0:
-          Successfully uninstalled tweepy-3.6.0
-    Successfully installed JPype1-0.7.5 beautifulsoup4-4.6.0 colorama-0.4.3 konlpy-0.5.2 tweepy-3.8.0
     
-
-
+    
+library import
 ```python
 import nltk
 from konlpy.tag import Kkma
@@ -77,7 +30,7 @@ import numpy as np
 import matplotlib as mpl
 ```
 
-
+한글 폰트 설치
 ```python
 path = '/usr/share/fonts/truetype/nanum/NanumGothicEco.ttf'
 font_name = fm.FontProperties(fname=path, size=10).get_name()
@@ -89,7 +42,7 @@ mpl.rcParams['axes.unicode_minus'] = False   # 음수 표시
     NanumGothic Eco
     
 
-
+폰트 rebuild
 ```python
 fm._rebuild()
 ```
@@ -117,7 +70,7 @@ plt.show()
 ```
 
 
-![png](output_9_0.png)
+![png](img/output_9_0.png)
 
 
 워드클라우드 생성
@@ -161,7 +114,7 @@ plt.show()
 ```
 
 
-![png](output_11_0.png)
+![png](img/output_11_0.png)
 
 
 단어들의 사용 횟수 확인 (빈도분석)
@@ -236,7 +189,7 @@ plt.show()
 ```
 
 
-![png](output_14_0.png)
+![png](img/output_14_0.png)
 
 
 신문사 별 기사수, 단어수 시각화
@@ -272,7 +225,7 @@ plt.xticks(rotation=50)
 
 
 
-![png](output_16_1.png)
+![png](img/output_16_1.png)
 
 
 신문사 별 민주당 vs 미래당(통합당) 언급 수에 따른 scatter plot
@@ -299,7 +252,7 @@ plt.show()
 ```
 
 
-![png](output_18_0.png)
+![png](img/output_18_0.png)
 
 
 
